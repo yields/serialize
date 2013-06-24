@@ -1,4 +1,3 @@
-
 # serialize
 
   serialize forms.
@@ -19,8 +18,8 @@
 </select>
 
 <script>
-  serialize(document.forms[0]);
-  assert('foo=baz&baz=foo&select=1' == serialize(two));
+  var el = document.forms[0];
+  assert('foo=baz&baz=foo&select=1' == serialize(el));
 </script>
 ```
 
