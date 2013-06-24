@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel='stylesheet' href='../build/build.css'>
+    <script src='../build/build.js'></script>
+    <script>require('visionmedia-mocha')</script>
+    <script>mocha.setup({ ui: 'bdd', reporter: 'html' })</script>
+    <style>form{ display: none; }</style>
+  </head>
+  <body>
+    <div id='mocha'></div>
+
+    <form>
+      <input type='text' name='foo' value='some text'>
+      <input type='text' name='baz' value='moar  text'>
+    </form>
+
+    <form>
+      <input type='text' name='foo' value='baz'>
+      <input type='text' name='baz' value='foo'>
+      <select name='select'>
+        <option value='1'></option>
+      </select>
+    </form>
+
+    <script src='test.js'></script>
+    <script>mocha.run()</script>
+  </body>
+</html>
