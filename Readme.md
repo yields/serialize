@@ -24,6 +24,13 @@
 </script>
 ```
 
+## todo
+
+  - multiple select
+  - arrays
+  - hashes
+  - ...
+
 ## License
 
   MIT
