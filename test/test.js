@@ -19,7 +19,6 @@ describe('serialize', function(){
   })
 
   it('should serialize a simple form', function(){
-    console.log(serialize(one));
     assert('foo=some+text&baz=moar++text' == serialize(one));
   })
 
