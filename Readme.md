@@ -20,15 +20,11 @@
 <script>
   var el = document.forms[0];
   assert('foo=baz&baz=foo&select=1' == serialize(el));
+
+  serialize.object(el);
+  // => { foo: "baz", baz: "foo", select: "1" }
 </script>
 ```
-
-## todo
-
-  - multiple select
-  - arrays
-  - hashes
-  - ...
 
 ## License
 
