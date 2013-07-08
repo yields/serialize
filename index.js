@@ -1,4 +1,3 @@
-
 /**
  * dependencies
  */
@@ -30,7 +29,7 @@ exports = module.exports = function(el){
 
 exports.object = function(el){
   return reduce(el.elements, function(ret, el){
-    if (!submittable(el)) return;
+    if (!submittable(el)) return ret;
 
     if (!ret[el.name]) {
       ret[el.name] = value(el);
