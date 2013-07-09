@@ -1,9 +1,9 @@
+
 /**
  * dependencies
  */
 
 var submittable = require('submittable')
-  , qs = require('querystring')
   , reduce = require('reduce')
   , value = require('value');
 
@@ -15,9 +15,16 @@ var submittable = require('submittable')
  */
 
 exports = module.exports = function(el){
-  return qs
-  .stringify(exports.object(el))
-  .replace(/%20/g, '+');
+ var ret = reduce(el.elements, param, []);
+ return ret.join('&').replace(/%20/g, '+');
+
+ function param(arr, el){
+   if (!submittable(el)) return arr;
+   var key = encodeURIComponent(el.name);
+   var val = encodeURIComponent(value(el));
+   arr.push(key + '=' + val);
+   return arr;
+ }
 };
 
 /**

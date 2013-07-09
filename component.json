@@ -7,7 +7,6 @@
   "dependencies": {
     "yields/submittable": "*",
     "component/value": "*",
-    "component/querystring": "*",
     "redventures/reduce": "*"
   },
   "development": {
