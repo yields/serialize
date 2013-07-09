@@ -2,7 +2,7 @@
   "name": "serialize",
   "repo": "yields/serialize",
   "description": "serialize forms.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "keywords": ["serialize", "urlencoded"],
   "dependencies": {
     "yields/submittable": "*",
