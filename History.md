@@ -1,4 +1,10 @@
 
+0.3.0 / 2014-07-25
+==================
+
+ * tests: use utf8 [stephenmathieson]
+ * Add arbitrary element support [stephenmathieson]
+
 0.2.0 / 2013-07-09
 ==================
 
