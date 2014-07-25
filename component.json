@@ -7,7 +7,8 @@
   "dependencies": {
     "yields/submittable": "*",
     "component/value": "*",
-    "redventures/reduce": "*"
+    "redventures/reduce": "*",
+    "component/query": "*"
   },
   "development": {
     "visionmedia/mocha": "*"

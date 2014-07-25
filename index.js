@@ -5,7 +5,8 @@
 
 var submittable = require('submittable')
   , reduce = require('reduce')
-  , value = require('value');
+  , value = require('value')
+  , query = require('query');
 
 /**
  * Serialize the given `form`.
@@ -15,7 +16,7 @@ var submittable = require('submittable')
  */
 
 exports = module.exports = function(el){
- var ret = reduce(el.elements, param, []);
+ var ret = reduce(query.all('*', el), param, []);
  return ret.join('&').replace(/%20/g, '+');
 
  function param(arr, el){
@@ -35,7 +36,7 @@ exports = module.exports = function(el){
  */
 
 exports.object = function(el){
-  return reduce(el.elements, function(ret, el){
+  return reduce(query.all('*', el), function(ret, el){
     if (!submittable(el)) return ret;
 
     if (!ret[el.name]) {

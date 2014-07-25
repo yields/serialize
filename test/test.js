@@ -35,6 +35,16 @@ describe('serialize', function(){
     assert('array%5B%5D=1&array%5B%5D=2' == serialize(array));
   })
 
+  it('should support arbitrary elements', function() {
+    var el = document.createElement('div')
+    el.innerHTML =
+        '<input type=text name=a value=a>'
+      + '<span type=text name=s></span>'
+      + '<input type=text name=a2 value=a2>'
+      + '<span type=text name=s2></span>';
+    assert('a=a&a2=a2' == serialize(el));
+  })
+
   function assert(expr, ms){
     if (!expr) throw new Error(ms || 'err');
   }
